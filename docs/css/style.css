@@ -282,6 +282,7 @@ h6 {
   transform: translate(0); }
 
 .nav-menu__link {
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -318,6 +319,8 @@ h6 {
   position: relative; }
   .footer .social-menu {
     justify-self: center; }
+    .footer .social-menu__link {
+      fill: white; }
 
 .footer__bgimg {
   position: absolute;

@@ -4,3 +4,4 @@ source/
 gulpfile.js
 package-lock.json
 package.json
+.gitignore
