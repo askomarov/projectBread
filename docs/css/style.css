@@ -152,7 +152,8 @@ h6 {
 .promo__recieps {
   display: grid;
   gap: 20px;
-  grid-template-columns: 1fr; }
+  grid-template-columns: 1fr;
+  padding: 25px 0; }
   @media (min-width: 767.98px) {
     .promo__recieps {
       grid-template-columns: repeat(6, 1fr);
@@ -175,7 +176,24 @@ h6 {
     -o-object-fit: cover;
        object-fit: cover; }
 
+.recieps-item__title {
+  font-weight: 400;
+  font-size: clamp(18px, 2vw, 20px); }
+
+.promo-title-main {
+  font-size: clamp(18px, 3vw, 32px);
+  position: relative; }
+  .promo-title-main::after {
+    margin-left: 10px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background: var(--main-color); }
+
 .recieps-item--heading {
+  overflow: hidden;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -194,6 +212,11 @@ h6 {
   .recieps-item--lg .recieps-item__img {
     width: 100%;
     min-height: 300px; }
+  .recieps-item--lg .recieps-item__title {
+    font-size: clamp(18px, 3vw, 32px); }
+  .recieps-item--lg .recieps-item__text {
+    color: #777;
+    font-size: 14px; }
 
 .recieps-item--sm {
   display: grid;
@@ -205,6 +228,55 @@ h6 {
       grid-column: -1/-3; } }
   .recieps-item--sm .recieps-item__title {
     flex: 0 1 auto; }
+
+.tostart {
+  padding: 25px 0;
+  border-top: 2px solid goldenrod;
+  border-bottom: 2px solid goldenrod;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px; }
+
+.tostart__text {
+  display: block;
+  max-width: 320px;
+  min-width: 280px; }
+
+.begin-sour {
+  padding: 50px 0;
+  overflow: hidden; }
+
+.begin-sour__title {
+  margin-bottom: 20px; }
+
+.begin-sour__wrapper {
+  display: block;
+  padding: 25px;
+  background: black url("../img/sourdought.jpg") no-repeat;
+  background-size: cover;
+  color: white;
+  filter: hue-rotate(20deg) brightness(0.8) saturate(0.8);
+  transition: all 0.7s ease 0s; }
+  .begin-sour__wrapper:hover {
+    filter: none; }
+
+.begin-sour__text {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: normal; }
+
+.begin-sour__pseudo-btn {
+  transition: all 0.7s ease 0s;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: 3px;
+  border: 2px solid #fff; }
+  .begin-sour__pseudo-btn:hover {
+    border-color: #3154da; }
 
 .start {
   height: 40vh;
@@ -252,9 +324,52 @@ h6 {
   background: #ffffe8;
   height: 35px; }
 
-@media (min-width: 767.98px) {
-  .header__nav-toggle {
-    display: none; } }
+.header__nav-toggle {
+  position: relative;
+  z-index: 30;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px; }
+  @media (min-width: 767.98px) {
+    .header__nav-toggle {
+      display: none; } }
+  .header__nav-toggle[aria-expanded="true"] .header__nav-toggle-icon {
+    background: transparent; }
+  .header__nav-toggle[aria-expanded="true"] .header__nav-toggle-icon::after {
+    transform: rotate(-225deg);
+    top: 0;
+    background: var(--main-color); }
+  .header__nav-toggle[aria-expanded="true"] .header__nav-toggle-icon::before {
+    transform: rotate(225deg);
+    top: 0;
+    background: var(--main-color); }
+  .header__nav-toggle .header__nav-toggle-icon {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: black;
+    position: relative; }
+    .header__nav-toggle .header__nav-toggle-icon:after {
+      transition: all 0.5s ease 0s;
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: inherit; }
+    .header__nav-toggle .header__nav-toggle-icon:before {
+      transition: all 0.5s ease 0s;
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: inherit; }
 
 .nav-menu {
   display: flex;
@@ -275,7 +390,7 @@ h6 {
   visibility: visible;
   display: flex;
   position: absolute;
-  top: 20px;
+  top: 35px;
   left: 0;
   right: 0;
   z-index: 20;
@@ -329,7 +444,7 @@ h6 {
   top: 0;
   left: 0;
   background: url("../img/bread-footer.jpg") no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   z-index: -1;
   background-attachment: fixed;
   filter: brightness(0.5) contrast(0.9); }
