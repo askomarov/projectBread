@@ -239,16 +239,21 @@ h6 {
   flex-wrap: wrap;
   gap: 25px; }
 
+.tostart__logo {
+  display: flex;
+  border-radius: 50%;
+  overflow: hidden; }
+
 .tostart__text {
   display: block;
   max-width: 320px;
   min-width: 280px; }
 
 .begin-sour {
-  padding: 50px 0;
-  overflow: hidden; }
+  padding: 50px 0; }
 
 .begin-sour__title {
+  overflow: hidden;
   margin-bottom: 20px; }
 
 .begin-sour__wrapper {
@@ -277,6 +282,9 @@ h6 {
   border: 2px solid #fff; }
   .begin-sour__pseudo-btn:hover {
     border-color: #3154da; }
+
+.begin-sour-item__title {
+  line-height: 30px; }
 
 .begin-sour__content {
   display: grid;
@@ -512,8 +520,9 @@ h6 {
   height: 100%;
   top: 0;
   left: 0;
-  background: url("../img/bread-footer.jpg") no-repeat;
-  background-size: 100% 100%;
+  background: url("../img/bread-2.jpg") no-repeat;
+  background-image: -webkit-image-set(url("../img/bread-2.webp") 1x);
+  background-size: cover;
   z-index: -1;
   background-attachment: fixed;
   filter: brightness(0.5) contrast(0.9); }

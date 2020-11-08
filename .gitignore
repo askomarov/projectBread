@@ -1,3 +1,4 @@
+.gitignore
 .vscode
 node_modules/
 source/
@@ -5,3 +6,4 @@ gulpfile.js
 package-lock.json
 package.json
 .gitignore
+debug.log
