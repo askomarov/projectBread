@@ -259,13 +259,19 @@ h6 {
 .begin-sour__wrapper {
   display: block;
   padding: 25px;
-  background: black url("../img/sourdought.jpg") no-repeat;
+  background: black url("../img/sourdought-mobile.jpg") no-repeat;
   background-size: cover;
   color: white;
   filter: hue-rotate(20deg) brightness(0.8) saturate(0.8);
   transition: all 0.7s ease 0s; }
   .begin-sour__wrapper:hover {
     filter: none; }
+  @media (min-width: 767.98px) {
+    .begin-sour__wrapper {
+      background-image: url("../img/sourdought-tablet.jpg"); } }
+  @media (min-width: 1300px) {
+    .begin-sour__wrapper {
+      background-image: url("../img/sourdought-desktop.jpg"); } }
 
 .begin-sour__text {
   margin-bottom: 20px;
@@ -520,12 +526,18 @@ h6 {
   height: 100%;
   top: 0;
   left: 0;
-  background: url("../img/bread-2.jpg") no-repeat;
-  background-image: -webkit-image-set(url("../img/bread-2.webp") 1x);
+  background: url("../img/sourdought-mobile.jpg") no-repeat;
+  background-image: -webkit-image-set(url("../img/sourdought-mobile.webp") 1x);
   background-size: cover;
   z-index: -1;
   background-attachment: fixed;
   filter: brightness(0.5) contrast(0.9); }
+  @media (min-width: 767.98px) {
+    .footer__bgimg {
+      background-image: url("../img/sourdought-tablet.jpg"); } }
+  @media (min-width: 1300px) {
+    .footer__bgimg {
+      background-image: url("../img/sourdought-desktop.jpg"); } }
 
 .footer__container {
   display: grid;
