@@ -337,18 +337,26 @@ h6 {
   color: black; }
 
 .start {
-  height: 40vh;
+  min-height: 40vh;
   min-height: 225px;
-  background: white url("../img/bread-3.jpg") no-repeat;
+  background: white url("../img/bread-3-mobile.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px 0; }
+  @media (min-width: 767.98px) {
+    .start {
+      background-image: url("../img/bread-3-tablet.jpg"); } }
+  @media (min-width: 1300px) {
+    .start {
+      background-image: url("../img/bread-3-desktop.jpg"); } }
 
 .start__title {
   font-size: clamp(20px, 4vw, 40px);
   display: inline-block;
-  line-height: 100%; }
+  line-height: 100%;
+  font-weight: 900;
+  text-shadow: 2px 3px 2px var(--main-color); }
 
 .header {
   padding: 20px 0px;
